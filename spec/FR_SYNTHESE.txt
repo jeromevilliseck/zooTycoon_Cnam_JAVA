@@ -1,0 +1,92 @@
+Synthèse
+
+Pour des raisons de focalisation sur les entrées et sorties et l’interaction avec l’utilisateur en mode console, ainsi que la modélisation du projet de manière abstraite, la deuxième partie du projet n’a pas été travaillée complètement mais sera réalisée dans la prochaine version. Veuillez nous en excuser.
+
+
+
+
+
+
+Ecart avec les prévisions
+
+Comme j’ai malheureusement été pris par le temps, je décrit ici le travail que j’entreprends réaliser sur la deuxième partie du tp.
+
+- La partie 2 du tp :
+- ajouter des nouveaux attributs à la classe abstraite Wolf
+- cela entrainera la modification du constructeur de la factory create (un constructeur supplémentaire avec les arguments supplémentaires)
+
+- l’attribut age
+un enum
+
+- l’attribut facteur de domination
+une fonction qui retournera une valeur sur d’un compteur placé (incrémentation) dans chaque fonction d’attaque d’un objet loup sur un autre objet loup : cette fonction contiendra une condition selon le résultat du calcul incrémentation en cas de succès du compteur, décrémentation en cas de défaite.
+
+- l’attribut niveau
+utilisera une fonction de calcul utilisant en opérandes des coefficients de pondération en constante & les attributs cibles
+
+Mesures d’amélioration
+- Les design patterns devront être d’avantage étudiés et mis en pratique car ces derniers permettent de gagner énormément de temps sur des problématiques de modélisation.
+
+- l’attribut meute
+de type Arraylist (nécessitera des classes meute avec des caractéristiques à leur tour.
+
+les fonctions
+- afficher ses caractéristiques
+fonction de type String avec return et les getters associés
+
+- hurler
+fonction de type String prenant en arguments un type d’hurlement (enum?) avec condition type switch case et return 
+éviter les fonctions type void syso au maximum car les syso doivent être aux maximum dans le main.
+
+- entendre un hurlement (listeners?)
+fonction classique si différent de sur les enum associés au sommeil et à la maladie
+
+- séparer de la meute
+remove de l’arraylist (on sors le loup de la classe meute correspondante)
+
+- vieillir
+un compteur avec une condition du suppression de l’objet si ce dernier atteint un nombre constant défini
+
+Domination et soumission
+
+- fonction d’attaque
+condition sur les attributs de deux objets supérieur / inférieur
+échange des rangs attribut V1 = temp
+attribut V1 = attribut V2
+attribut V2 = temp
+facteur de domination =  compteur à incrémentation / décrémentation
+rang de dominance en attribut enum qui sera réaffecté selon l’issue de la condition de la fonction.
+
+Male alpha
+fonction de type max() sur l’attribut force des objets loup crées.
+
+Loup solitaire
+avec un random() compris en x et y, si lors de la fonction d’attaque le loup échoue, on le soumet à une condition supplémentaire dans la fonction : 
+si il répond à la condition on le supprime de la liste à laquelle il est rattaché.
+
+
+
+
+
+
+
+Bilan technique
+
+Certaines partie du code peuvent être encore être réduites par l’emploi de boucles sur certaines fonctions réalisées avec des variables locales.
+
+
+
+
+
+
+
+
+Problèmes rencontrés
+- Transformation du chaine de caractère en nombre de manière parfaite.
+- Les interfaces des enclos n’ont pas été exploitées jusqu’au bout.
+- Certaines fonctions devront être redéployées dans les interfaces.
+- Créer des listes de listes aurait été intéressant pour la gestion des enclos.
+- La modélisation UML à la fin à permis de détecter des doublons dans les méthodes.
+
+- Les méthodes permettant de donner la vie devront changer de type afin de retourner la creation d’un animal (simple)
+
